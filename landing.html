@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+    background-image: url("9019796.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; }
+
+
+    .bg-hero {
+            background-image: url('bg.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        
+        .neon-text {
+            background: linear-gradient(135deg, #00f260, #0575E6);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hover-glow {
+            transition: 0.3s;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 242, 96, 0.7), 0 0 60px rgba(5, 117, 230, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .bg-hero {
+            background-image: url('bg2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .bg-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+            }
+
+            .navbar-menu.open {
+                display: block;
+            }
+        }
+
+        .services-container .services-box {
+           
+            padding: 3rem 2rem;
+            margin: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: .2rem solid #333;
+            transition: .5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-container .services-box:hover {
+            border-color: var(--main-color);
+            transform: scale(1.05);
+        }
+
+        .services-box img {
+            max-width: 100px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .services-box:hover img {
+            transform: scale(1.2);
+        }
+
+        .roadmap-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .roadmap-item {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 15rem;
+            transition: 0.3s;
+        }
+
+        .roadmap-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 242, 96, 0.7);
+        }
+
+        .circle {
+            background-color: #00f260;
+            
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .arrow {
+            font-size: 3rem;
+            color: #00f260;
+            transform: rotate(90deg);
+        }
+
+        @media (min-width: 768px) {
+            .arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        .video-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .video-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .text-high-contrast {
+            color: #ffffff;
+          
+        }
+
+
+        .text-bright {
+            color: #00f260;
+        }
+
+        .btn-cta {
+            background-color: #0575E6;
+            color: #ffffff;
+        }
+
+        .btn-cta:hover {
+            background-color: #00f260;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+
+    <nav class="py-4 px-6 fixed w-full top-0 z-50 shadow-md bg-gray-900">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Brand Name -->
+          <a class="text-2xl font-semibold text-white" href="#">
+            Cryptic
+          </a>
+          
+          <!-- Mobile Menu Toggle Button (Visible on small screens) -->
+          <button class="md:hidden text-white text-3xl focus:outline-none" id="navbar-toggle">
+            ☰
+          </button>
+      
+          <!-- Navbar Menu (Visible on medium and larger screens) -->
+          <div class="hidden md:flex space-x-8" id="navbar-menu">
+            <a href="#top" class="text-white hover:text-gray-400">Home</a>
+            <a href="#about" class="text-white hover:text-gray-400">About</a>
+            <a href="#features" class="text-white hover:text-gray-400">Features</a>
+            <a href="/Signin.html" class="text-white hover:text-gray-400">Sign In</a>
+          </div>
+        </div>
+      
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="hidden" id="mobile-menu">
+          <a href="#top" class="block text-white py-2 hover:bg-gray-800 text-center">Home</a>
+          <a href="#about" class="block text-white py-2 hover:bg-gray-800 text-center">About</a>
+          <a href="#features" class="block text-white py-2 hover:bg-gray-800 text-center">Features</a>
+          <a href="/Signin.html" class="block text-white py-2 hover:bg-gray-800 text-center">Sign In</a>
+        </div>
+      </nav>
+      
+     
+      
+
+    <section class="h-screen flex items-center justify-center bg-hero" id="top">
+        <div class="bg-overlay w-full h-full flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-7xl font-extrabold text-white animate__animated animate__fadeInDown">Welcome to Cryptic</h1>
+                <p class="mt-4 text-2xl text-gray-200 animate__animated animate__fadeInUp">A platform to securly send data with the help of steganography and AES algorithm</p>
+                <a href="/Signin.html"
+                    class="mt-8 inline-block bg-green-400 text-white text-xl py-3 px-6 rounded-lg hover:bg-green-500 transition hover-glow">Get
+                    Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container mx-auto py-16 text-center bg-high-contrast text-high-contrast" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-8 neon-text">About Cryptic</h2>
+        <p class="text-lg leading-relaxed max-w-2xl mx-auto">
+            Cyptic leverages the speed, security, and scalability to offer a seamless transaction of information
+            experience for users. Here’s a step-by-step breakdown of how it works:
+        </p>
+    </section>
+
+    <section id="htw" class="container mx-auto py-16 text-center bg-high-contrast text-high-contrast" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-8 neon-text">How Crptic Works</h2>
+        <p class="text-lg max-w-2xl mx-auto leading-relaxed mb-12"> 
+        </p>
+
+        <div class="roadmap-container">
+            <div class="roadmap-item">
+                <div class="circle">1</div>
+                <h3 class="text-xl font-bold mt-4">Sign Up</h3>
+                <p class="text-gray-300">Register on the cyptic platform with your email.</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="roadmap-item">
+                <div class="circle">2</div>
+                <h3 class="text-xl font-bold mt-4">Encode your secret message</h3>
+                <p class="text-gray-300">Encode your message using our app which leverages AES algorithm to secure your message and send to receiver's email</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="roadmap-item">
+                <div class="circle">3</div>
+                <h3 class="text-xl font-bold mt-4">Decode the Message from Image</h3>
+                <p class="text-gray-300">Decode the image to get you secret message</p>
+            </div>
+        </div>
+    </section>
+
+<section id="features" class="container mx-auto py-16 text-center text-high-contrast" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-8 neon-text">Features of Cryptic</h2>
+    <div class="services-box">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/speed.png" alt="Fast Transactions" class="mb-4 mx-auto">
+        <h3 class="text-2xl font-semibold neon-text">Fast Transactions</h3>
+        <p class="text-gray-300 mt-2">Experience lightning-fast transaction of you data</p>
+    </div>
+    <br></br>
+    <div class="services-box">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/secured-letter--v1.png" alt="Secure Payments" class="mb-4 mx-auto">
+        <h3 class="text-2xl font-semibold neon-text">Secure Messages</h3>
+        <p class="text-gray-300 mt-2">Cryptic offers secure Messages powered by Aes algorithm.</p>
+    </div>
+    <br></br>
+    
+    <div class="services-box">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/globe.png" alt="Global Usability" class="mb-4 mx-auto">
+        <h3 class="text-2xl font-semibold neon-text">Global Usability</h3>
+        <p class="text-gray-300 mt-2">Crptic can be used globaly and send your message anywhere securly</p>
+    </div>
+</section>
+
+
+       
+    </section>
+
+    <footer class="bg-gray-900 py-8 text-center text-gray-400">
+        <p>&copy; 2024 Cryptic. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const navbarToggle = document.getElementById("navbar-toggle");
+        const navbarMenu = document.querySelector(".navbar-menu");
+
+        navbarToggle.addEventListener("click", () => {
+            navbarMenu.classList.toggle("open");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+
+        body {
+            background-color: #121212; /* Dark background */
+            color: #f0f0f0; /* Light text for better contrast */
+            font-family: 'Arial', sans-serif;
+            background-image: url("9019796.jpg");
+
+        }
+
+        .navbar {
+            background-color: #1f1f1f; /* Darker navbar */
+        }
+
+        .nav-link {
+            color: #f0f0f0 !important; /* White text for navigation */
+        }
+
+        .nav-link:hover {
+            color: #00adb5 !important; /* Accent color on hover */
+        }
+
+        .btn-primary {
+            background-color: #00adb5; /* Custom primary button color */
+            border-color: #00adb5;
+        }
+
+        .btn-primary:hover {
+            background-color: #007f87; /* Darker shade on hover */
+        }
+
+        .card {
+            background-color: #1f1f1f; /* Darker card background */
+            border: none; /* Remove card borders */
+            color: #f0f0f0; /* Light text */
+        }
+
+        .form-control {
+            background-color: #2d2d2d; /* Input background */
+            border: 1px solid #444; /* Border for input fields */
+            color: #f0f0f0; /* Light text */
+        }
+
+        .form-control:focus {
+            border-color: #00adb5;
+            box-shadow: none;
+        }
+
+        #canvasbox {
+            margin-top: 20px;
+        }
+
+        .tab-pane {
+            padding: 20px; /* Padding for content inside tab panels */
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .nav-tabs .nav-link {
+            color: #f0f0f0; /* Light text for tab */
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: #00adb5; /* Highlight active tab */
+            color: white;
+        }
+
+        #myTab button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+        #myTab .nav-link.active {
+            border-radius: 5px;
+        }
